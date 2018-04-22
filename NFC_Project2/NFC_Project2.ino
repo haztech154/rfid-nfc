@@ -1,7 +1,6 @@
 #include <Wire.h>
-#include "Adafruit_PN532.h"
 #include "Adafruit_RGBLCDShield.h"
-#include "utility/Adafruit_MCP23017.h"
+#include "Adafruit_PN532.h"
 
 #define PN532_IRQ   (2)
 #define PN532_RESET (3)
@@ -15,8 +14,8 @@
 
 // create the LCD and NFC objects
 Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
-Adafruit_PN532 nfc(PN532_IRQ, PN532_RESET);
-
+//Adafruit_PN532 nfc(PN532_IRQ, PN532_RESET);
+Adafruit_PN532 nfc(13, 11, 12, 10);
 void setup() {
 
   // initiate NFC and LCD shields
@@ -280,8 +279,3 @@ void writeNFCcard() {
     */
     
 }
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 47806e3bfa77d9be93d96476f00448263d895080
